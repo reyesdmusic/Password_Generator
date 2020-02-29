@@ -1,7 +1,7 @@
 body {
     display: block;
     margin: 0px;
-    background-color: gray;
+    background-color: rgb(97, 3, 0);
     height: 100% auto;
   }
   
@@ -13,20 +13,22 @@ body {
   }
 
 #footer {
-    background-color: honeydew;
+    background-color: rgb(223, 223, 223);
     width: 100%;
-    padding: 5px;
+    padding: 0px;
     position: fixed;
     bottom: 0px;
 }
 
 #container-content {
-    background-color: honeydew;
+    background-color: rgb(223, 223, 223);
     height: auto;
     text-align: center;
     margin-top: 80px;
     padding: 20px;
     margin-bottom: 100px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #qualifier-form {
@@ -45,5 +47,26 @@ body {
   font-size: 16px;
   border-radius: 8px;
 }
+
+#print-password {
+  background-color: white;
+  word-wrap: break-word;
+  height: auto;
+  text-align: center;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+#clear {
+  float: right;
+  background-color: rgb(8, 32, 13);
+  color: white;
+  margin-bottom: 5px;
+  padding: 7px;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
 
 

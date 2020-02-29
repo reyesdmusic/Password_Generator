@@ -5,6 +5,7 @@ var specialChar = document.querySelector("#special");
 var numeric = document.querySelector("#numeric");
 var submit = document.querySelector("#submit-button")
 var printPassword = document.getElementById("print-password")
+var clear = document.getElementById("clear");
 
 var alphabet = "a b c d e f g h i j k l m n o p q r s t u v w x y z";
 var lowerCaseArray = alphabet.split(" ");
@@ -12,6 +13,7 @@ var numericArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialChars = "! @ # $ % ^ & * ( )"
 var specialCharArray = specialChars.split(" ");
 var penultimateArray = [];
+var finalArray = [];
 var itsThisMany = 0;
 
 
@@ -19,6 +21,12 @@ var itsThisMany = 0;
 function shuffle(array) {
     array.sort(() => Math.random() - 0.5);
   }
+
+function pickAmount(array) {
+    for (let i = 0; i < passwordLength.value; i++) {
+    var randomNumber = Math.floor(Math.random() * array.length);
+    finalArray.push(array[randomNumber]);
+}}
 
   
 function checkPasswordLength() {
@@ -76,6 +84,7 @@ function pickFromArray() {
     };
 
     if (upperCase.checked == true)  {
+        var randomNumber = Math.floor(Math.random() * lowerCaseArray.length);
         penultimateArray.push(lowerCaseArray[randomNumber].toUpperCase());
         
     };
@@ -95,16 +104,23 @@ function pickFromArray() {
 
     console.log(penultimateArray.join(''));}
 
-    printPassword.textContent = penultimateArray.join('');
+    pickAmount(penultimateArray);
+
+    printPassword.textContent = finalArray.join('');
+
 };
 
+function clearFunction() {
+window.location.reload();
 
+}
+
+clear.addEventListener("click", clearFunction)
 submit.addEventListener("click", checkPasswordLength);
 submit.addEventListener("click", mustCheckOne);
 submit.addEventListener("click", pickFromArray);
-submit.addEventListener("click", thisManyArrays);
-submit.addEventListener("click", findHowManyLoops);
-
+// submit.addEventListener("click", thisManyArrays);
+// submit.addEventListener("click", findHowManyLoops);
 
 
 
