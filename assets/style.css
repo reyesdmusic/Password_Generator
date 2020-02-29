@@ -1,0 +1,56 @@
+body {
+    display: block;
+    margin: 0px;
+    background-color: gray;
+    height: 100% auto;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+#footer {
+    background-color: honeydew;
+    width: 100%;
+    padding: 5px;
+    position: fixed;
+    bottom: 0px;
+}
+
+#container-content {
+    background-color: honeydew;
+    height: auto;
+    text-align: center;
+    margin-top: 80px;
+    padding: 20px;
+    margin-bottom: 100px;
+}
+
+#qualifier-form {
+  text-align: left;
+  line-height: 20px;
+  padding: 15px;
+}
+
+#submit-button {
+  float: right;
+  background-color: rgb(8, 32, 13);
+  color: white;
+  margin-bottom: 5px;
+  padding: 7px;
+  border: none;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+#print-password {
+  margin-top: 30px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+  height: 100px;
+}
+
