@@ -11,7 +11,9 @@ var lowerCaseArray = alphabet.split(" ");
 var numericArray = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 var specialChars = "! @ # $ % ^ & * ( )"
 var specialCharArray = specialChars.split(" ");
-penultimateArray = [];
+var penultimateArray = [];
+var itsThisMany = 0;
+
 
 
 function shuffle(array) {
@@ -31,7 +33,6 @@ function checkPasswordLength() {
     else if (passwordLength.value > 128) {
     alert("Password must be no more the 128 characters long.")
     }
-  
 
 };
 
@@ -41,11 +42,34 @@ function mustCheckOne() {
     }
 };
 
+// function thisManyArrays() {
+//     if (lowerCase.checked == true) {
+//         itsThisMany++;
+//     };
+
+//     if (upperCase.checked == true) {
+//         itsThisMany++;
+//     };
+
+//     if (specialChar.checked == true) {
+//         itsThisMany++;
+//     };
+
+//     if (numeric.checked == true) {
+//         itsThisMany++;
+//     };
+
+//     console.log(itsThisMany);
+// }
 
 
 function pickFromArray() {
+    
+    
+    for (let i = 0; i < 128; i++) {
+        
     if (lowerCase.checked == true)  {
-        for (let i = 0; i < 8; i++) {
+        
         var randomNumber = Math.floor(Math.random() * lowerCaseArray.length);
         penultimateArray.push(lowerCaseArray[randomNumber]);
         
@@ -75,11 +99,11 @@ function pickFromArray() {
 };
 
 
-
 submit.addEventListener("click", checkPasswordLength);
 submit.addEventListener("click", mustCheckOne);
 submit.addEventListener("click", pickFromArray);
-
+submit.addEventListener("click", thisManyArrays);
+submit.addEventListener("click", findHowManyLoops);
 
 
 
