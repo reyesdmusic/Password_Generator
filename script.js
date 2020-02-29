@@ -14,19 +14,21 @@ var specialChars = "! @ # $ % ^ & * ( )"
 var specialCharArray = specialChars.split(" ");
 var penultimateArray = [];
 var finalArray = [];
-var itsThisMany = 0;
-
-
 
 function shuffle(array) {
     array.sort(() => Math.random() - 0.5);
-  }
+    }
 
 function pickAmount(array) {
     for (let i = 0; i < passwordLength.value; i++) {
     var randomNumber = Math.floor(Math.random() * array.length);
     finalArray.push(array[randomNumber]);
-}}
+    }   
+    }
+
+function clearFunction() {
+    window.location.reload();
+    }
 
   
 function checkPasswordLength() {
@@ -34,42 +36,24 @@ function checkPasswordLength() {
     console.log(passwordLength.value);
     if (passwordLength.value == 0) {
     alert("Must pick a password length.")
+    printPassword = "";
     }
     else if (passwordLength.value < 8) {
     alert("Password must be at least 8 characters long."); 
+    printPassword = "";
     }
     else if (passwordLength.value > 128) {
     alert("Password must be no more the 128 characters long.")
+    printPassword = "";
     }
 
-};
+    };
 
 function mustCheckOne() {
     if (upperCase.checked == false && lowerCase.checked == false && specialChar.checked == false && numeric.checked == false) {
         alert("Must pick at least one character-type.");
     }
-};
-
-// function thisManyArrays() {
-//     if (lowerCase.checked == true) {
-//         itsThisMany++;
-//     };
-
-//     if (upperCase.checked == true) {
-//         itsThisMany++;
-//     };
-
-//     if (specialChar.checked == true) {
-//         itsThisMany++;
-//     };
-
-//     if (numeric.checked == true) {
-//         itsThisMany++;
-//     };
-
-//     console.log(itsThisMany);
-// }
-
+    };
 
 function pickFromArray() {
     
@@ -79,20 +63,17 @@ function pickFromArray() {
     if (lowerCase.checked == true)  {
         
         var randomNumber = Math.floor(Math.random() * lowerCaseArray.length);
-        penultimateArray.push(lowerCaseArray[randomNumber]);
-        
+        penultimateArray.push(lowerCaseArray[randomNumber]);     
     };
 
     if (upperCase.checked == true)  {
         var randomNumber = Math.floor(Math.random() * lowerCaseArray.length);
-        penultimateArray.push(lowerCaseArray[randomNumber].toUpperCase());
-        
+        penultimateArray.push(lowerCaseArray[randomNumber].toUpperCase());  
     };
 
     if (numeric.checked == true)  {
         var randomNumber = Math.floor(Math.random() * numericArray.length);
-        penultimateArray.push(numericArray[randomNumber]);
-        
+        penultimateArray.push(numericArray[randomNumber]);    
     };
 
     if (specialChar.checked == true) {
@@ -110,17 +91,13 @@ function pickFromArray() {
 
 };
 
-function clearFunction() {
-window.location.reload();
 
-}
 
 clear.addEventListener("click", clearFunction)
 submit.addEventListener("click", checkPasswordLength);
 submit.addEventListener("click", mustCheckOne);
 submit.addEventListener("click", pickFromArray);
-// submit.addEventListener("click", thisManyArrays);
-// submit.addEventListener("click", findHowManyLoops);
+
 
 
 

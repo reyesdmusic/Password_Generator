@@ -12,6 +12,6 @@
 
 *User will receive error prompts if necessary criterea is not entered or if a number outside of 8 and 128 is entered for password length.
 
-*A clear button is included that clears the form by refreshing the page.
+*Includes a "clear" button that clears the form by refreshing the page.
 
 *The layout is responsive.

@@ -3,6 +3,7 @@ body {
     margin: 0px;
     background-color: rgb(97, 3, 0);
     height: 100% auto;
+    color: rgb(8, 32, 13);
   }
   
   ul {
@@ -13,7 +14,7 @@ body {
   }
 
 #footer {
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(133, 133, 133);
     width: 100%;
     padding: 0px;
     position: fixed;
@@ -41,7 +42,6 @@ body {
   float: right;
   background-color: rgb(8, 32, 13);
   color: white;
-  margin-bottom: 5px;
   padding: 7px;
   border: none;
   font-size: 16px;
@@ -67,6 +67,18 @@ body {
   font-size: 16px;
   border-radius: 8px;
 }
+
+#password-length {
+  border: none;
+  width: 60px;
+  border-radius: 4px;
+}
+
+h1, h2, button {
+  font-family: 'Patua One';
+}
+
+
 
 
 
