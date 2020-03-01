@@ -1,9 +1,9 @@
 body {
     display: block;
     margin: 0px;
-    background-color: rgb(97, 3, 0);
+    background-color: rgb(90, 7, 4);
     height: 100% auto;
-    color: rgb(8, 32, 13);
+    color: rgb(0, 2, 27);
   }
   
   ul {
@@ -14,15 +14,17 @@ body {
   }
 
 #footer {
-    background-color: rgb(133, 133, 133);
+    background-color: rgb(0, 2, 27);
     width: 100%;
     padding: 0px;
     position: fixed;
     bottom: 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    color: white;
 }
 
 #container-content {
-    background-color: rgb(223, 223, 223);
+    background-color: rgb(236, 235, 235);
     height: auto;
     text-align: center;
     margin-top: 80px;
@@ -40,12 +42,13 @@ body {
 
 #submit-button {
   float: right;
-  background-color: rgb(8, 32, 13);
+  background-color: rgb(0, 2, 27);
   color: white;
   padding: 7px;
   border: none;
   font-size: 16px;
   border-radius: 8px;
+  margin: 0px;
 }
 
 #print-password {
@@ -59,7 +62,7 @@ body {
 
 #clear {
   float: right;
-  background-color: rgb(8, 32, 13);
+  background-color: rgb(0, 2, 27);
   color: white;
   margin-bottom: 5px;
   padding: 7px;
@@ -72,12 +75,24 @@ body {
   border: none;
   width: 60px;
   border-radius: 4px;
+  margin-left: 10px;
 }
 
-h1, h2, button {
+h1, h2, button, footer {
   font-family: 'Patua One';
 }
 
+#pass-title {
+  float: left;
+}
+
+#pick-title {
+  float: none;
+}
+
+h5 {
+  font-size: 18px;
+}
 
 
 
